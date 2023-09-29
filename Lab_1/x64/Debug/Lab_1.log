@@ -1,3 +1,3 @@
 ﻿  Lab_1.cpp
-D:\OSISP\Lab_1\Lab_1.cpp(73): warning C4715: 'SoftwareMainProcedure': not all control paths return a value
+D:\OSISP\Lab_1\Lab_1.cpp(97): warning C4715: 'SoftwareMainProcedure': not all control paths return a value
   Lab_1.vcxproj -> D:\OSiSP\Lab_1\x64\Debug\Lab_1.exe
