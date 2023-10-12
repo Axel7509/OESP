@@ -65,6 +65,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 				GetDlgItemInt(hWnd, IndexColorG, NULL, false),
 				GetDlgItemInt(hWnd, IndexColorB, NULL, false)
 				));
+			RGB(10,255,0);
 
 			RedrawWindow(hWnd, NULL, NULL, RDW_UPDATENOW | RDW_INVALIDATE);
 
@@ -87,6 +88,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 	case WM_CREATE:
 		MainWndAddMenus(hWnd);
 		MainWndAddWidgets(hWnd);
+		MainWndRect(hWnd);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0); 
@@ -119,7 +121,7 @@ void MainWndAddWidgets(HWND hWnd) {
 	hStaticControl = CreateWindowA("static", "Main Window!", WS_VISIBLE | WS_CHILD | ES_CENTER, 200, 5, 100, 30, hWnd, NULL, NULL, NULL);
 
 	//hEditControl = CreateWindowA("edit", "Enter text!", WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL, 5, 40, 470, 120, hWnd, NULL, NULL, NULL);
-	windowRectangle = { 5 + 470, 40, 5, 40 + 120 };
+	//windowRectangle = { 5 + 470, 40, 5, 40 + 120 };
 
 	CreateWindowA("edit", "0", WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_NUMBER, 5, 170, 100, 30, hWnd, (HMENU)IndexColorR, NULL, NULL);
 	CreateWindowA("edit", "0", WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_NUMBER, 110, 170, 100, 30, hWnd, (HMENU)IndexColorG, NULL, NULL);
@@ -148,4 +150,12 @@ LRESULT CALLBACK KeyboardHookCallback(int nCode, WPARAM wParam, LPARAM lParam)
 
 	// Передача управления следующему хуку в цепочке
 	return CallNextHookEx(g_hHook, nCode, wParam, lParam);
+}
+
+void MainWndRect(HWND hWnd) {
+
+	//hEditControl = CreateWindowA("edit", "Enter text!", WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL, 5, 40, 470, 120, hWnd, NULL, NULL, NULL);
+	windowRectangle = { 5 + 470, 40, 5, 40 + 120 };
+	brushRectangle = CreateSolidBrush(RGB(10, 255, 0));
+	FillRect(ps.hdc, &windowRectangle, brushRectangle);
 }

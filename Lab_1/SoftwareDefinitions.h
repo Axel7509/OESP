@@ -28,3 +28,4 @@ WNDCLASS NewWindowClass(HBRUSH BGColor, HCURSOR Cursor, HINSTANCE hInst, HICON I
 
 void MainWndAddMenus(HWND hwnd);
 void MainWndAddWidgets(HWND hwnd);
+void MainWndRect(HWND hwnd);
