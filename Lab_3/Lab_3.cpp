@@ -89,7 +89,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 void MainWndAddMenus(HWND hwnd) {
 	HMENU RootMenu = CreateMenu();
 	HMENU SubMenu = CreateMenu();
-	
+
 	AppendMenu(SubMenu, MF_STRING, OnClear, L"Clear");
 	AppendMenu(SubMenu, MF_STRING, OnSave, L"Save");
 	AppendMenu(SubMenu, MF_STRING, OnLoad, L"Load");
@@ -114,10 +114,10 @@ void MainWndAddWidgets(HWND hWnd) {
 
 void SaveData(LPCSTR path) {
 	HANDLE SourceFile = CreateFileA(
-		path, 
-		GENERIC_WRITE, 
+		path,
+		GENERIC_WRITE,
 		0,
-		NULL, 
+		NULL,
 		CREATE_ALWAYS,
 		FILE_ATTRIBUTE_NORMAL,
 		NULL);
@@ -128,7 +128,7 @@ void SaveData(LPCSTR path) {
 		return;
 	}
 
-	
+
 	DWORD saveLenth = GetWindowTextLength(hEditControl) + 1;
 	char* data = new char[saveLenth];
 

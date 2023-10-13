@@ -1,0 +1,10 @@
+﻿  Lab_4.cpp
+D:\OSiSP\Lab_4\Lab_4.cpp(71): warning C4715: 'SoftwareMainProcedure': not all control paths return a value
+Lab_4.obj : error LNK2019: unresolved external symbol "double __cdecl GetCPUUsage(void)" (?GetCPUUsage@@YANXZ) referenced in function "long __stdcall SoftwareMainProcedure(struct HWND__ *,unsigned int,unsigned int,long)" (?SoftwareMainProcedure@@YGJPAUHWND__@@IIJ@Z)
+Lab_4.obj : error LNK2019: unresolved external symbol _PdhOpenQueryW@12 referenced in function "double __cdecl GetCPULoadPercentage(void)" (?GetCPULoadPercentage@@YANXZ)
+Lab_4.obj : error LNK2019: unresolved external symbol _PdhAddCounterW@16 referenced in function "double __cdecl GetCPULoadPercentage(void)" (?GetCPULoadPercentage@@YANXZ)
+Lab_4.obj : error LNK2019: unresolved external symbol _PdhCollectQueryData@4 referenced in function "double __cdecl GetCPULoadPercentage(void)" (?GetCPULoadPercentage@@YANXZ)
+Lab_4.obj : error LNK2019: unresolved external symbol _PdhCloseQuery@4 referenced in function "double __cdecl GetCPULoadPercentage(void)" (?GetCPULoadPercentage@@YANXZ)
+Lab_4.obj : error LNK2019: unresolved external symbol _PdhGetFormattedCounterValue@16 referenced in function "double __cdecl GetCPULoadPercentage(void)" (?GetCPULoadPercentage@@YANXZ)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+D:\OSiSP\Lab_4\Debug\Lab_4.exe : fatal error LNK1120: 7 unresolved externals
