@@ -5,14 +5,14 @@
 #include <windows.h>
 #include "SoftwareDefinitions.h"
 #include <string>
-/*
+
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "iphlpapi.lib")
 
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 //#include <iphlpapi.h>
-*/
+
 
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow) {
@@ -66,7 +66,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 			SaveData("D:\\OSiSP\\libs\\output.txt");
 			break;
 		case OnLoad:
-			LoadData("D:\\OSiSP\\libs\\output.txt");
+			LoadData("D:\\OSiSP\\Lab_3.docx");
 			break;
 		case OnExitSoftware:
 			PostQuitMessage(0);

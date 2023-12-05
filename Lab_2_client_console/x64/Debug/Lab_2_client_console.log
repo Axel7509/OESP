@@ -1,0 +1,3 @@
+﻿  Lab_2_client_console.cpp
+D:\OSiSP\Lab_2_client_console\Lab_2_client_console.cpp(31,62): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  Lab_2_client_console.vcxproj -> D:\OSiSP\Lab_2_client_console\x64\Debug\Lab_2_client_console.exe
